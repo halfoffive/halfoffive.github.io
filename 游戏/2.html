@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AlsdGo打砖块</title>
+    <!-- 严禁转载 -->
+    <style type="text/css">
+        .outer {
+            width: 600px;
+            height: 600px;
+            background-color: aquamarine;
+            border: 1px dotted gray;
+            position: absolute;
+            margin-left: 600px;
+            margin-top: 50px;
+            font-size: 50px;
+            text-align: center;
+            color: red;
+            line-height: 300px;
+        }
+        .in {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 500px;
+            left: 75px;
+            border: 0px;
+            margin: 0px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            border: 0px solid black;
+        }
+        .btm {
+            width: 200px;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+            top: 550px;
+            left: 0px;
+            border: 0px;
+            margin: 0px;
+        }
+        .btmspan1{
+            width: 30px;
+            height: 30px;
+            background-color: aquamarine;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border: 10px double darkblue;
+            margin: 0px;
+        }
+        .button1 {
+            width: 100px;
+            height: 50px;
+            margin-left: 600px;
+            margin-top: 0px;
+
+            font-size: 20px;
+            text-align: center;
+            color: black;
+            line-height: 50px;
+        }
+        .button2 {
+            width: 100px;
+            height: 50px;
+            margin-left: 0px;
+            margin-top: 0px;
+            font-size: 20px;
+            text-align: center;
+            color: black;
+            line-height: 50px;
+        }
+        .test0 {
+            width: 100px;
+            height: 50px;
+            margin-left: 1000px;
+            margin-top: -50px;
+            font-size: 15px;
+            text-align: right;
+            line-height: 60px;
+        }
+        .test1 {
+            width: 100px;
+            height: 50px;
+            background-color: #d0d0d0;
+            border: 1px solid black;
+            margin-left: 1100px;
+            margin-top: -50px;
+            font-size: 30px;
+            text-align: right;
+            line-height: 75px;
+        }
+        .square {
+            width: 98px;
+            height: 48px;
+            background-color: salmon;
+            border: 1px solid black;
+            margin: 0px;
+            text-align: center;
+            line-height: 48px;
+            font-size: 30px;
+        }
+        .left {
+            float: left;
+        }
+        .clear-left {
+            clear: left;
+        }
+        .bigger {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: blue;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-size: 10px;
+            text-align: center;
+            line-height: 20px;
+            color: yellow;
+            display: none;
+        }
+        .smaller {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-size: 10px;
+            text-align: center;
+            line-height: 20px;
+            color: yellow;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="square left"></div>
+    <div class="square left"></div>
+    <div class="square left"></div>
+    <div class="square left"></div>
+    <div class="square left"></div>
+    <div class="square left"></div>
+    <div class="square clear-left left"></div>
+    <div class="square left"></div>
+    <div class="square left"></div>
+    <div class="square left"></div>
+    <div class="square left"></div>
+    <div class="square left"></div>
+    <div class="in">50</div>
+    <div class="btm">
+        <span class="btmspan1" style="left: 40px;width: 110px;height: 44px;border: 3px dotted darkblue; background-color: aquamarine"></span>
+        <span class="btmspan1" style="left: 150px; background-color: aquamarine"></span>
+        <span class="btmspan1" style="left: 0px; background-color: aquamarine"></span>
+    </div>
+    <div class="bigger">B</div>
+    <div class="smaller">S</div>
+</div>
+<div>
+    <button class="button1">开始</button>
+    <button class="button2">停止</button>
+    <button class="button2">减速</button>速度:
+    <button class="button2">0</button>
+    <button class="button2" style="display: none">左移</button>
+    <button class="button2" style="display: none">右移</button>
+    <div class="test0">分数:</div>
+    <div class="test1">100</div>
+</div>
+<script type="text/javascript">
+    var outer = document.getElementsByClassName("outer")[0];
+    var start = document.getElementsByTagName("button")[0];
+    var stop = document.getElementsByTagName("button")[1];
+    var slow = document.getElementsByTagName("button")[2];
+    var vvvv = document.getElementsByTagName("button")[3];
+    var vvvv88 = 0;
+    var leftmove = document.getElementsByTagName("button")[4];
+    var rightmove = document.getElementsByTagName("button")[5];
+    var indiv = document.getElementsByClassName("in")[0];
+    var inwidth = 50;
+    var inheight = 50;
+    var ininnerhtml = 50;
+    var btmdiv = document.getElementsByClassName("btm")[0];
+    var btmspan1div = document.getElementsByClassName("btmspan1")[0];
+    var btmspan1div1 = document.getElementsByClassName("btmspan1")[1];
+    var btmspan1div2 = document.getElementsByClassName("btmspan1")[2];
+    var test1div = document.getElementsByClassName("test1")[0];
+    var squares = document.getElementsByClassName("square");
+    var bigger = document.getElementsByClassName("bigger")[0];
+    var btop = 0;
+    var bleft = 0;
+    var smaller = document.getElementsByClassName("smaller")[0];
+    var stop1 = 0;
+    var sleft = 0;
+    var step = 1;
+    var timeId1;
+    var step2 = 1;
+    var timeId2;
+    var btmstep = 0;
+    var btmstep2 = 550;
+    var left = 75;
+    var direction = 0;
+    var top2 = 500;
+    var direction2 = 0;
+    function showbigger() {
+        bleft = Math.random() * 580;
+        btop = Math.random() * 300 + 100;
+        bigger.style.top = btop + "px";
+        bigger.style.left = bleft + "px";
+        bigger.style.display = "block";
+    }
+    function showsmaller() {
+        sleft = Math.random() * 580;
+        stop1 = Math.random() * 300 + 100;
+        smaller.style.top = stop1 + "px";
+        smaller.style.left = sleft + "px";
+        smaller.style.display = "block";
+    }
+    function changecolor() {
+        if(btmspan1div.style.backgroundColor == indiv.style.backgroundColor){
+            btmspan1div.style.backgroundColor = "aquamarine";
+            btmspan1div.style.borderColor = "darkblue";
+        }else {
+            btmspan1div.style.backgroundColor = indiv.style.backgroundColor;
+            btmspan1div.style.borderColor = indiv.style.borderColor;
+        }
+    }
+    function changecolor2() {
+        btmspan1div1.style.backgroundColor = btmspan1div.style.backgroundColor;
+        btmspan1div2.style.backgroundColor = btmspan1div.style.backgroundColor;
+        btmspan1div1.style.borderColor = btmspan1div.style.borderColor;
+        btmspan1div2.style.borderColor = btmspan1div.style.borderColor;
+    }
+    showbigger();
+    showsmaller();
+    start.onclick = function () {
+        timeId1 = setInterval(updateLeft, 1);
+        timeId2 = setInterval(updateTop, 1);
+        start.innerHTML = "加速";
+        vvvv88++;
+        vvvv.innerHTML = vvvv88;
+    }
+    stop.onclick = function () {
+        for (var i = 2; i <= timeId1; i++) {
+            clearInterval(i);
+        }
+        for (var i = 2; i <= timeId2; i++) {
+            clearInterval(i);
+        }
+        start.innerHTML = "开始";
+    }
+    slow.onclick = function () {
+        if (timeId1 > 2) {
+            clearInterval(timeId1);
+        }
+        if (timeId2 > 2) {
+            clearInterval(timeId2);
+        }
+        if (vvvv88 > 0) {
+            vvvv88--;
+        }
+        vvvv.innerHTML = vvvv88;
+    }
+    leftmove.onclick = function () {
+        if (btmstep >= 50) {
+            btmstep = btmstep - 50;
+        }
+        btmdiv.style.left = btmstep + "px";
+    }
+    rightmove.onclick = function () {
+        if (btmstep <= 350) {
+            btmstep = btmstep + 50;
+        }
+        btmdiv.style.left = btmstep + "px";
+    }
+    function updateLeft() {
+        if (left <= 600 - inwidth && direction == 0) {
+            left += step;
+        }
+        else if (left <= 0 && direction == 1) {
+            direction = 0;
+            left += step;
+        }
+        else {
+            direction = 1;
+            left -= step;
+        }
+        indiv.style.left = left + "px";
+    }
+    var kk;
+    var qq;
+    var bottomlocation;
+    var toplocation;
+    var num1 = 0;
+    var num2 = 0;
+    var num3 = 0;
+    var num4 = 0;
+    var num5 = 0;
+    var num6 = 0;
+    var scoreA = 99;
+    function updateTop() {
+        if (num1 == 1 && num2 == 1 && num3 == 1 && num4 == 1 && num5 == 1 && num6 == 1) {
+            for (var i = 2; i <= timeId1; i++) {
+                clearInterval(i);
+            }
+            for (var i = 2; i <= timeId2; i++) {
+                clearInterval(i);
+            }
+            outer.innerHTML = "GOOD GAME";
+            alert("再来一次");
+            location.reload();
+        }
+        if (bleft - left >= -20 && bleft - left <= inwidth && btop - top2 >= -20 && btop - top2 <= inwidth) {
+            bigger.style.display = "none";
+            showbigger();
+            if (inwidth < 100) {
+                inwidth = inwidth + 10;
+                inheight = inheight + 10;
+                ininnerhtml = ininnerhtml + 10;
+                indiv.style.width = inwidth + "px";
+                indiv.style.height = inheight + "px";
+                indiv.innerHTML = ininnerhtml;
+                indiv.style.lineHeight = ininnerhtml + "px";
+                var colors = getTwoColor();
+                indiv.style.backgroundColor = colors[0];
+                indiv.style.borderColor = colors[1];
+            } else {
+                indiv.innerHTML = "Max";
+                var colors = getTwoColor();
+                indiv.style.backgroundColor = colors[0];
+                indiv.style.borderColor = colors[1];
+            }
+        }
+        if (sleft - left >= -20 && sleft - left <= inwidth && stop1 - top2 >= -20 && stop1 - top2 <= inwidth) {
+            smaller.style.display = "none";
+            showsmaller();
+            if (inwidth > 20) {
+                inwidth = inwidth - 10;
+                inheight = inheight - 10;
+                ininnerhtml = ininnerhtml - 10;
+                indiv.style.width = inwidth + "px";
+                indiv.style.height = inheight + "px";
+                indiv.innerHTML = ininnerhtml;
+                indiv.style.lineHeight = ininnerhtml + "px";
+                var colors = getTwoColor();
+                indiv.style.backgroundColor = colors[0];
+                indiv.style.borderColor = colors[1];
+            } else {
+                indiv.innerHTML = "";
+                var colors = getTwoColor();
+                indiv.style.backgroundColor = colors[0];
+                indiv.style.borderColor = colors[1];
+            }
+        }
+        kk = left - btmstep + inwidth/2;
+        qq = btmstep2 - top2 - (inheight-1);
+        bottomlocation = 600 - inheight;
+        if (kk >= 0 && kk <= 200 && qq >= 0) {
+            bottomlocation = btmstep2 - inheight;
+            if(qq==0){
+                step = Math.abs(kk-100)/100+1;
+                changecolor2();
+                changecolor();
+            }
+        }
+        if (top2 == 601-inheight) {
+            scoreA = scoreA - 50;
+        } else if (top2 == 551-inheight && kk >= 0 && kk <= 200) {
+            scoreA++;
+        }
+        test1div.innerHTML = scoreA;
+        if (scoreA < 0) {
+            for (var i = 2; i <= timeId1; i++) {
+                clearInterval(i);
+            }
+            for (var i = 2; i <= timeId2; i++) {
+                clearInterval(i);
+            }
+            outer.innerHTML = "GAME OVER";
+            alert("再来一次");
+            location.reload();
+        }
+        toplocation = 100;
+        switch (true) {//0-550
+            case left >= 0 && left < 75 && num1 == 1:
+                toplocation = 0;
+                break;
+            case left >= 75 && left < 175 && num2 == 1:
+                toplocation = 0;
+                break;
+            case left >= 175 && left < 275 && num3 == 1:
+                toplocation = 0;
+                break;
+            case left >= 275 && left < 375 && num4 == 1:
+                toplocation = 0;
+                break;
+            case left >= 375 && left < 475 && num5 == 1:
+                toplocation = 0;
+                break;
+            case left >= 475 && left <= 550 && num6 == 1:
+                toplocation = 0;
+                break;
+            case left >= 0 && left < 75 && num1 == 2:
+                toplocation = 50;
+                break;
+            case left >= 75 && left < 175 && num2 == 2:
+                toplocation = 50;
+                break;
+            case left >= 175 && left < 275 && num3 == 2:
+                toplocation = 50;
+                break;
+            case left >= 275 && left < 375 && num4 == 2:
+                toplocation = 50;
+                break;
+            case left >= 375 && left < 475 && num5 == 2:
+                toplocation = 50;
+                break;
+            case left >= 475 && left <= 550 && num6 == 2:
+                toplocation = 50;
+                break;
+        }
+        if (top2 <= bottomlocation && direction2 == 0) {// 正常往下走
+            top2 += step2;
+        } else if (top2 <= toplocation && direction2 == 1) {// 到顶部换方向 第一层方块
+            if (top2 == 100) {
+                switch (true) {//0-550
+                    case left >= 0 && left < 75:
+                        squares[6].style.backgroundColor = "aquamarine";
+                        squares[6].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num1 = 2;
+                        break;
+                    case left >= 75 && left < 175:
+                        squares[7].style.backgroundColor = "aquamarine";
+                        squares[7].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num2 = 2;
+                        break;
+                    case left >= 175 && left < 275:
+                        squares[8].style.backgroundColor = "aquamarine";
+                        squares[8].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num3 = 2;
+                        break;
+                    case left >= 275 && left < 375:
+                        squares[9].style.backgroundColor = "aquamarine";
+                        squares[9].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num4 = 2;
+                        break;
+                    case left >= 375 && left < 475:
+                        squares[10].style.backgroundColor = "aquamarine";
+                        squares[10].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num5 = 2;
+                        break;
+                    case left >= 475 && left <= 550:
+                        squares[11].style.backgroundColor = "aquamarine";
+                        squares[11].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num6 = 2;
+                        break;
+                }
+            }
+            if (top2 == 50) {
+                switch (true) {
+                    case left >= 0 && left < 75:
+                        squares[0].style.backgroundColor = "aquamarine";
+                        squares[0].style.border = "1px solid aquamarine";
+                        squares[6].style.backgroundColor = "aquamarine";
+                        squares[6].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num1 = 1;
+                        break;
+                    case left >= 75 && left < 175:
+                        squares[1].style.backgroundColor = "aquamarine";
+                        squares[1].style.border = "1px solid aquamarine";
+                        squares[7].style.backgroundColor = "aquamarine";
+                        squares[7].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num2 = 1;
+                        break;
+                    case left >= 175 && left < 275:
+                        squares[2].style.backgroundColor = "aquamarine";
+                        squares[2].style.border = "1px solid aquamarine";
+                        squares[8].style.backgroundColor = "aquamarine";
+                        squares[8].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num3 = 1;
+                        break;
+                    case left >= 275 && left < 375:
+                        squares[3].style.backgroundColor = "aquamarine";
+                        squares[3].style.border = "1px solid aquamarine";
+                        squares[9].style.backgroundColor = "aquamarine";
+                        squares[9].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num4 = 1;
+                        break;
+                    case left >= 375 && left < 475:
+                        squares[4].style.backgroundColor = "aquamarine";
+                        squares[4].style.border = "1px solid aquamarine";
+                        squares[10].style.backgroundColor = "aquamarine";
+                        squares[10].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num5 = 1;
+                        break;
+                    case left >= 475 && left <= 550:
+                        squares[5].style.backgroundColor = "aquamarine";
+                        squares[5].style.border = "1px solid aquamarine";
+                        squares[11].style.backgroundColor = "aquamarine";
+                        squares[11].style.border = "1px solid aquamarine";
+                        scoreA = scoreA + 10;
+                        test1div.innerHTML = scoreA;
+                        num6 = 1;
+                        break;
+                }
+            }
+            direction2 = 0;
+            top2 += step2;
+        } else {
+            direction2 = 1;
+            top2 -= step2;
+        }
+        indiv.style.top = top2 + "px";
+    }
+    document.onkeydown = function (event) {
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        switch (true) {
+            case e.keyCode == 13:
+                timeId1 = setInterval(updateLeft, 1);
+                timeId2 = setInterval(updateTop, 1);
+                start.innerHTML = "加速";
+                vvvv88++;
+                vvvv.innerHTML = vvvv88;
+                break;
+            case e.keyCode == 37:
+                if (btmstep >= 50) {
+                    btmstep = btmstep - 50;
+                }
+                btmdiv.style.left = btmstep + "px";
+                break;
+            case e.keyCode == 39:
+                if (btmstep <= 350) {
+                    btmstep = btmstep + 50;
+                }
+                btmdiv.style.left = btmstep + "px";
+                break;
+            case e.keyCode == 38:
+                qq = btmstep2 - top2 - (inheight-1);
+                if (btmstep2 >= 200&&qq>inheight) {
+                    btmstep2 = btmstep2 - 50;
+                }
+                btmdiv.style.top = btmstep2 + "px";
+                break;
+            case e.keyCode == 40:
+                if (btmstep2 <= 500) {
+                    btmstep2 = btmstep2 + 50;
+                }
+                btmdiv.style.top = btmstep2 + "px";
+                break;
+        }
+    }
+    function getTwoColor() {
+        var rr = Math.random()*(255+1);
+        var gg = Math.random()*(255+1);
+        var bb = Math.random()*(255+1);
+        var color1 = colorRGB2Hex(rr+","+gg+","+bb);
+        var color2 = colorRGB2Hex((255-rr)+","+(255-gg)+","+(255-bb));
+        var colors = [color1,color2];
+        return colors;
+    }
+    function colorRGB2Hex(color) {
+        var rgb = color.split(',');
+        var r = parseInt(rgb[0].split('(')[1]);
+        var g = parseInt(rgb[1]);
+        var b = parseInt(rgb[2].split(')')[0]);
+        var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        return hex;
+    }
+</script>
+</body>
+</html>
