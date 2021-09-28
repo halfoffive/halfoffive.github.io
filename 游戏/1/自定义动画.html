@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        .one{
+            background: blueviolet;
+            position: absolute;
+            left: 500px;
+            height: 10px;
+            width: 0px;
+            transform: rotate(-90deg);
+            bottom: 45%;
+
+            transform-origin: 0 100%;
+
+            transition:transform 0.5s linear;
+        }
+
+        .two{
+            transform: rotate(0deg);
+        }
+
+        .ren{
+            position: absolute;
+            left: 450px;
+            bottom: 45%;
+
+        }
+        .well{
+            position: absolute;
+            left: 450px;
+            bottom: 20%;
+            background: black;
+            height: 200px;
+            width: 100px;
+
+        }
+        .man img.rotate{
+            transform:translate(0px,300px);
+            -ms-transform:translate(0px,300px);
+            -moz-transform:translate(0px,300px);
+            -webkit-transform:translate(0px,300px);
+            -o-transform:translate(0px,300px);
+
+            transform-origin:100% 100%;
+            -ms-transform-origin:100% 100%;
+            -moz-transform-origin:100% 100%;
+            -webkit-transform-origin:100% 100%;
+            -o-transform-origin:100% 100%;
+
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="jquery-3.4.1.js"></script>
+<input type="button" value="点我变长">
+<h1>您的分数为：<span id="num">0</span></h1>
+
+<div>
+    <div class="one"></div>
+    <div class="ren"><img src="img/stick_stand.png"></div>
+    <div class="well-box"><div class="well"></div><div class="well"></div></div>
+
+</div>
+<script type="text/javascript">
+    var stop=true;
+    var num=0;
+    var number = Math.floor(Math.random()*800+100);
+    $($(".well").get(1)).css("left",450+number)
+
+    $("input").mousedown(function () {
+        if(stop){
+            $(".one").animate({"width":"1000px"},1000)
+        }
+    })
+    $("input").mouseup(function () {
+        if(stop){
+            $(".one").stop();//停止所有执行的函数
+            stop=false;
+            $(".one").addClass("two");
+            moveren();
+        }
+    })
+    
+    function moveren() {
+        //获取棍子的长度
+        var one = $(".one").width();
+        //替换我们的图片
+        $(".ren img").attr("src","img/stick.gif");
+        //
+        setTimeout(function () {
+            $(".ren").animate({"left":(one+500)+"px"},1000,function() {
+                //1.人没有跑过去
+                if ((one < number - 50) || (one > number + 50)) {
+                    $(".ren").animate({"bottom": "0px"});
+                    setTimeout(function () {
+                        $(".ren").hide()
+                    }, 200);
+                  var flag=  confirm("您是否要给观看广告并复活");
+                  if(flag){
+                      location.href="广告页面.html?_ijt=6dsf612rkvau6kv4qg7fma1tib&num="+num;
+                  }else{
+                      location.href="自定义动画.html"
+                  }
+                } else {
+                    //2.人跑过去了
+                    num+=100;
+                    $("#num").text(num);
+                    $(".ren").css("left",450);
+                    $(".ren img").attr("src","img/stick_stand.png")//小人初始化
+                    $(".one").removeClass("two")
+                    $(".one").width(0)//棍子初始化
+                    number = Math.floor(Math.random()*800+100);
+                    $($(".well").get(1)).css("left",450+number)//柱子初始化
+                    stop=true;//Ⅹ按钮能够再次点击
+
+                }
+
+            })
+        },1000)
+    }
+
+        var test=window.location.href;
+        var number1 = test.lastIndexOf("?");
+        var sub = test.substring(number1+1,test.length);
+        if(sub==="flag=false"){
+            location.href="自定义动画.html"
+        }else{
+          var subb=  sub.indexOf("&");
+
+          var  subflag=sub.substring(0,subb);
+          if(subflag==="flag=true"){
+              var subnum=sub.lastIndexOf("=");
+              num=sub.substring(subnum+1,subb.length);
+              $("#num").text(num);
+              $(".ren").css("left",450);
+              $(".ren img").attr("src","img/stick_stand.png")//小人初始化
+              $(".one").removeClass("two")
+              $(".one").width(0)//棍子初始化
+              number = Math.floor(Math.random()*800+100);
+              $($(".well").get(1)).css("left",450+number)//柱子初始化
+              stop=true;//Ⅹ按钮能够再次点击
+          }
+
+
+        }
+
+</script>
+
+</body>
+</html>
