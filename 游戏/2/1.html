@@ -1,22 +1,9 @@
-
-<script type="text/javascript">
-function usename_error(){
- var name=document.getElementByIdx_x("username").value;
- var pass=document.getElementByIdx_x("password").value;
-   if(name==""||pass==""){
-      alert("账号密码为空！！");
-    location='000.html';//失败跳转到当前页面 
-   }
-   elif(name=="niaodtiantang"||pass=="123456"){
-     <meta http-equiv="refresh" content="0;url= http://niaodtiantang.github.io/游戏/2/index">;//成功跳转到doLogin
-     }
-    else{
-     alert("账号密码为空！！");
-     return false;
-   }
-</script>
-<form method="get" οnsubmit="return usename_error()">
-<input name="username" id="username" type="text" />
-<input name="password" id="password" type="text" />
-<input type="submit" value="确定" id="subscribe_button" />
-</form
+var btn = document.getElementsByClassName('layui-btn-sm')[0];
+var url = 'http://localhost/admin';
+check = function () {
+            if (input.value == 'change') {
+                window.location = url;
+            } else {
+                alert('输入错误')
+            }
+        };
