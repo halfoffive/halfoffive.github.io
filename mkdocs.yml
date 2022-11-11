@@ -42,3 +42,10 @@ extra:
 repo_url: https://github.com/niaodtiantang/niaodtiantang.github.io/
 repo_name: niaodtiantang/niaodtiantang.github.io
 edit_uri: https://github.com/niaodtiantang/niaodtiantang.github.io/edit/main/docs/
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
