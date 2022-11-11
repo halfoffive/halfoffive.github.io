@@ -3,7 +3,7 @@ nav:
 - 首页: index.md
 theme: 
    name: material
-   custom_dir: overrides/
+   custom_dir: docs/overrides
    language: zh
    # logo: 
    # favicon: 
