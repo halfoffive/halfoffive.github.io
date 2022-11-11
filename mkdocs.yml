@@ -1,0 +1,44 @@
+site_name: niaodtiantang
+nav:
+- 首页: index.md
+theme: 
+   name: material
+   language: zh
+   # logo: 
+   # favicon: 
+   icon:
+        repo: fontawesome/brands/github
+   features:
+        - navigation.instant
+        - navigation.tracking
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.expand
+        - toc.follow
+        - navigation.top
+        - content.code.annotate
+site_description: 让世界更美好
+site_author: Niaodtiantang
+copyright: ©2021-2023 Niaodtiantang
+plugins:
+    - search:
+        lang:
+            - en
+            - ja
+            - zh
+        separator: '[\s\-\.]+'
+    - git-revision-date-localized:
+        enable_creation_date: true
+        type: iso_datetime
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    homepage: https://niaodtiantang.github.io/
+repo_url: https://github.com/niaodtiantang/niaodtiantang.github.io/
+repo_name: niaodtiantang/niaodtiantang.github.io
+edit_uri: https://github.com/niaodtiantang/niaodtiantang.github.io/edit/main/docs/
