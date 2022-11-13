@@ -1,7 +1,7 @@
 site_name: niaodtiantang
 nav:
 - 首页: README.md
-- 博客: blog
+- 博客: 
     - 首页: blog/README.md
     - 年:
         - 2022: blog/year2022.md
