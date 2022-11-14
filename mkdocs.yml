@@ -23,6 +23,11 @@ theme:
         - navigation.top
         - content.code.annotate
         - announce.dismiss
+        - navigation.indexes
+        - navigation.expand
+        - search.suggest
+        - search.highlight
+        - search.share
 site_description: 让世界更美好
 site_url: http://www.niaodtiantang.com/
 site_author: Niaodtiantang
@@ -47,6 +52,19 @@ extra:
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
     homepage: https://www.niaodtiantang.com/
+    palette: 
+ 
+        # Palette toggle for light mode
+        - scheme: default
+          toggle:
+            icon: material/brightness-7 
+            name: Switch to dark mode
+ 
+        # Palette toggle for dark mode
+        - scheme: slate
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
 repo_url: https://github.com/niaodtiantang/niaodtiantang.github.io/
 repo_name: niaodtiantang/niaodtiantang.github.io
 edit_uri: https://github.com/niaodtiantang/niaodtiantang.github.io/edit/main/docs/
