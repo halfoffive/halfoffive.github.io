@@ -24,6 +24,7 @@ theme:
         - content.code.annotate
         - announce.dismiss
 site_description: 让世界更美好
+site_url: http://www.niaodtiantang.com/
 site_author: Niaodtiantang
 copyright: ©2021-2023 Niaodtiantang
 plugins:
