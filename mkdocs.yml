@@ -32,18 +32,18 @@ theme:
         - search.highlight
         - search.share
     palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+        - scheme: default
+          primary: indigo
+          accent: indigo
+          toggle:
+            icon: material/brightness-7
+            name: Switch to dark mode
+        - scheme: slate
+          primary: indigo
+          accent: indigo
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
 site_description: 让世界更美好
 site_url: http://www.niaodtiantang.com/
 site_author: Niaodtiantang
