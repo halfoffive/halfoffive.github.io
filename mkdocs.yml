@@ -5,7 +5,6 @@ nav:
     - blog/README.md
     - 首页: blog/README.md
     - 2022: 
-        - blog/year2022.md
         - 目录: blog/year2022.md
         - 文本编辑器制作srt字幕: blog/1.md
 theme: 
@@ -32,7 +31,7 @@ theme:
         - search.highlight
         - search.share
 site_description: 让世界更美好
-site_url: http://www.niaodtiantang.com/
+site_url: http://niaodtiantang.github.io/
 site_author: Niaodtiantang
 copyright: ©2021-2023 Niaodtiantang
 plugins:
@@ -54,7 +53,7 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-    homepage: https://www.niaodtiantang.com/
+    homepage: https://niaodtiantang.github.io/
 
 repo_url: https://github.com/niaodtiantang/niaodtiantang.github.io/
 repo_name: niaodtiantang/niaodtiantang.github.io
