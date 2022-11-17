@@ -7,6 +7,7 @@ nav:
     - 2022: 
         - 目录: blog/year2022.md
         - 文本编辑器制作srt字幕: blog/1.md
+        - 使用格式工厂嵌入字幕: blog/2.md
 theme: 
    name: material
    custom_dir: docs/overrides
