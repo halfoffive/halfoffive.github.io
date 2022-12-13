@@ -9,6 +9,7 @@ nav:
         - 文本编辑器制作srt字幕: blog/1.md
         - 使用格式工厂嵌入字幕: blog/2.md
         - UbuntuKylin 20.24 Pro SP1操作系统上的宝塔面板搭建Nextcloud私有云: blog/3.md
+        - 使用安卓手机通过KSWEB搭建服务器: blog/4.md
 theme: 
    name: material
    custom_dir: docs/overrides
