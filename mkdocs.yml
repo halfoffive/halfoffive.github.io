@@ -51,6 +51,9 @@ plugins:
         type: timeago
         locale: zh
     - glightbox
+    - git-committers:
+      repository: niaodtiantang/niaodtiantang.github.io
+      branch: main
 extra:
   consent:
     title: Cookie consent
