@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /overrides
+sitemap: https://niaodtiantang.github.io/sitemap.xml
+sitemap: https://niaodtiantang.github.io/sitemap.xml.gz
