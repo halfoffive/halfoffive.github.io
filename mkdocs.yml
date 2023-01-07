@@ -48,6 +48,7 @@ plugins:
     - git-revision-date-localized:
         enable_creation_date: true
         type: timeago
+        locale: zh
     - glightbox
 extra:
   consent:
