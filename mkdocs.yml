@@ -13,8 +13,10 @@ nav:
         - HTML5中嵌入JavaScript: blog/5.md
         - 清理微信的缓存: blog/6.md
         - 玩转github的个人主页: blog/7.md
+        - 利用KsWeb搭建WordPress博客: blog/8.md
     - 2023:
         - 索引: blog/year2023.md
+        - 宝塔面板搭建frps内网穿透服务器: blog/9.md
 theme: 
    name: material
    custom_dir: docs/overrides
@@ -40,7 +42,7 @@ theme:
         - search.highlight
         - search.share
 site_description: 让世界更美好
-site_url: http://niaodtiantang.github.io/
+site_url: https://niaodtiantang.github.io/
 site_author: Niaodtiantang
 copyright: ©2021-2023 Niaodtiantang
 plugins:
