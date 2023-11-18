@@ -1,11 +1,9 @@
 site_name: niaodtiantang
 nav:
 - 首页: README.md
-- 博客: 
-    - blog/README.md
-    - 首页: blog/README.md
-    - 2022: 
-        - 索引: blog/year2022.md
+- 博客:
+    - blog/index.md
+    - 2022:
         - 文本编辑器制作srt字幕: blog/1.md
         - 使用格式工厂嵌入字幕: blog/2.md
         - UbuntuKylin 20.24 Pro SP1操作系统上的宝塔面板搭建Nextcloud私有云: blog/3.md
@@ -15,7 +13,6 @@ nav:
         - 玩转github的个人主页: blog/7.md
         - 利用KsWeb搭建WordPress博客: blog/8.md
     - 2023:
-        - 索引: blog/year2023.md
         - 宝塔面板搭建frps内网穿透服务器: blog/9.md
 theme: 
    name: material
@@ -26,25 +23,29 @@ theme:
    icon:
         repo: fontawesome/brands/github
    features:
-        - navigation.footer
-        - navigation.instant
-        - navigation.tracking
-        - navigation.tabs
-        - navigation.tabs.sticky
-        - navigation.expand
-        - toc.follow
-        - navigation.top
-        - content.code.annotate
-        - announce.dismiss
-        - navigation.indexes
-        - navigation.expand
-        - search.suggest
-        - search.highlight
-        - search.share
+     - navigation.footer
+     - navigation.instant
+     - navigation.instant.progress
+     - navigation.tracking
+     - navigation.tabs
+     - navigation.tabs.sticky
+     - navigation.expand
+     - toc.follow
+     - toc.integrate
+     - navigation.top
+     - content.code.annotate
+     - announce.dismiss
+     - navigation.indexes
+     - navigation.expand
+     - search.suggest
+     - search.highlight
+     - search.share
+     - navigation.sections
+     - navigation.prune
 site_description: 让世界更美好
-site_url: https://niaodtiantang.github.io/
+site_url: https://ndtt.eu.org/
 site_author: Niaodtiantang
-copyright: ©2021-2023 Niaodtiantang
+copyright: ©2021-2024 Niaodtiantang
 plugins:
     - search:
         lang:
@@ -57,7 +58,13 @@ plugins:
         type: timeago
         locale: zh
     - glightbox
-
+    - blog
+    - rss:
+        enabled: !ENV [ CI, false ]
+        match_path: blog/posts/.*
+        date_from_meta:
+          as_creation: date
+        comments_path: "#__comments"
 extra:
   consent:
     title: Cookie consent
