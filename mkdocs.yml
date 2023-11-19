@@ -3,17 +3,6 @@ nav:
 - 首页: README.md
 - 博客:
     - blog/index.md
-    - 2022:
-        - 文本编辑器制作srt字幕: blog/1.md
-        - 使用格式工厂嵌入字幕: blog/2.md
-        - UbuntuKylin 20.24 Pro SP1操作系统上的宝塔面板搭建Nextcloud私有云: blog/3.md
-        - 使用安卓手机通过KSWEB搭建服务器: blog/4.md
-        - HTML5中嵌入JavaScript: blog/5.md
-        - 清理微信的缓存: blog/6.md
-        - 玩转github的个人主页: blog/7.md
-        - 利用KsWeb搭建WordPress博客: blog/8.md
-    - 2023:
-        - 宝塔面板搭建frps内网穿透服务器: blog/9.md
 theme: 
    name: material
    custom_dir: docs/overrides
