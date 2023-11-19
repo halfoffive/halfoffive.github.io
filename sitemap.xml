@@ -1,83 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://niaodtiantang.github.io/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/1/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2022/01/25/srt/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/10/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2023/05/02/python/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/11/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2023/08/20/python/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/2/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2023/11/20/htmltextarea/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/3/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2022/01/26/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/4/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2022/02/13/ubuntukylin-2024-pro-sp1nextcloud/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/5/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2022/02/15/ksweb/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/6/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2022/04/23/html5javascript/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/7/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2022/06/20/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/8/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2022/07/18/github/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/9/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2022/08/01/kswebwordpress/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/year2022/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/2023/01/31/frps/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/year2023/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/archive/2023/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://niaodtiantang.github.io/blog/img/</loc>
-         <lastmod>2023-10-06</lastmod>
+         <loc>https://ndtt.eu.org/blog/archive/2022/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/category/python/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/category/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/category/wordpress/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/category/ksweb/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/category/github/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/category/wechat/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/category/javascript/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/category/html/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/page/2/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ndtt.eu.org/blog/category/page/2/</loc>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
