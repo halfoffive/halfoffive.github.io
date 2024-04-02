@@ -2,8 +2,9 @@ name: build
 on:
   push:
     branches:
-      - "main/docs/*"
-      - "main/mkdocs.yml"
+      - "main"
+    paths:
+      - "docs/*"
 jobs:
   deploy:
     runs-on: ubuntu-latest
