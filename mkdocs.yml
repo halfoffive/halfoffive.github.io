@@ -9,6 +9,7 @@ theme:
    language: zh
    # logo: 
    # favicon: 
+   use_directory_urls：false
    icon:
         repo: fontawesome/brands/github
    features:
