@@ -4,13 +4,13 @@ nav:
 - 首页: README.md
 - 博客:
     - blog/index.md
+use_directory_urls: false
 theme: 
    name: material
    custom_dir: docs/overrides
    language: zh
    # logo: 
    # favicon: 
-   use_directory_urls: false
    icon:
         repo: fontawesome/brands/github
    features:
