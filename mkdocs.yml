@@ -1,5 +1,5 @@
 #
-site_name: niaodtiantang
+site_name: Half Of Five
 nav:
 - 首页: README.md
 - 博客:
@@ -34,9 +34,9 @@ theme:
      - navigation.sections
      - navigation.prune
 site_description: 让世界更美好
-site_url: https://ndtt.eu.org/
+site_url: https://halfoffive.github.io
 site_author: Niaodtiantang
-copyright: ©2021-2024 Niaodtiantang
+copyright: ©2021-2099 Half Of Five
 plugins:
     - search:
         lang:
@@ -64,11 +64,11 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-    homepage: https://niaodtiantang.github.io/
+    homepage: https://halfoffive.github.io/
 
-repo_url: https://github.com/niaodtiantang/niaodtiantang.github.io/
-repo_name: niaodtiantang/niaodtiantang.github.io
-edit_uri: https://github.com/niaodtiantang/niaodtiantang.github.io/edit/main/docs/
+repo_url: https://github.com/halfoffive/halfoffive.github.io
+repo_name: halfoffive/halfoffive.github.io
+edit_uri: https://github.com/halfoffive/halfoffive.github.io/edit/main/docs/
 
 markdown_extensions:
     - pymdownx.highlight:
